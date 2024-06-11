@@ -35,7 +35,6 @@ function App() {
       ) : (
         <>
         <div className="app_banner">
-          <h1 className="app_title">Rick and Morty</h1>
         </div>
           <form className="app_form" onSubmit={handleSubmit}>
             <input className="app_form-input" ref={textInput} type="number" />
