@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  background-color: azure;
+  color: white;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+button {
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+}
+
+button {
+  border: none;
+}
+
+/* App */
+
+.glitch {
+  position: relative;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 5px;
+  z-index: 1;
+  animation: shift 1s ease-in-out infinite alternate;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #8b00ff;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #00e571;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-3px, 3px);
+  }
+
+  40% {
+    transform: translate(-3px, -3px);
+  }
+
+  60% {
+    transform: translate(3px, 3px);
+  }
+
+  80% {
+    transform: translate(3px, -3px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes shift {
+  0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+    transform: skewX(0deg);
+  }
+
+  41% {
+    transform: skewX(10deg);
+  }
+
+  42% {
+    transform: skewX(-10deg);
+  }
+
+  59% {
+    transform: skewX(40deg) skewY(10deg);
+  }
+
+  60% {
+    transform: skewX(-40deg) skewY(-10deg);
+  }
+
+  63% {
+    transform: skewX(10deg) skewY(-5deg);
+  }
+
+  70% {
+    transform: skewX(-50deg) skewY(-20deg);
+  }
+
+  71% {
+    transform: skewX(10deg) skewY(-10deg);
+  }
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #05292e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.app_banner {
+  width: 100%;
+  height: 200px;
+  background-image: url('../public/assets/Rick\ &\ Morty\ [Banner]\ [By\ DARKDESIGN].jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.app_title {
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+}
+
+.app_form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.app_form-input {
+  border-radius: 7px 0 0 7px;
+  padding: 5px;
+}
+
+.app_form-btn {
+  border-radius: 0 7px 7px 0;
+  padding: 5px 15px;
+  background-color: #71a821;
+}
+
+.app_container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .app_banner {
+    height: 150px;
+  }
+
+  .app_title {
+    font-size: 1.5em;
+  }
+
+  .app_form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app_form-input,
+  .app_form-btn {
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+
+  .app_container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app_banner {
+    height: 100px;
+  }
+
+  .app_title {
+    font-size: 1.2em;
+  }
+
+  .app_form {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .app_form-input,
+  .app_form-btn {
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+
+  .app_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
