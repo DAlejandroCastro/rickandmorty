@@ -4,10 +4,10 @@
 
 Esta aplicación utiliza la API de Rick and Morty para mostrar información sobre diferentes ubicaciones y los personajes que residen en ellas. Los usuarios pueden buscar ubicaciones por su ID y ver detalles sobre los residentes de cada ubicación.
 
-## Capturas
+## Capturas de pantalla
 
-<img url='./public/assets/captura 2.jpg'>
-<img url='./public/assets/captura 1.jpg'>
+<img src='./public/assets/captura 2.jpg'>
+<img src='./public/assets/captura 1.jpg'>
 
 ## Características
 
