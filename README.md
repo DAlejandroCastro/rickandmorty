@@ -6,8 +6,8 @@ Esta aplicación utiliza la API de Rick and Morty para mostrar información sobr
 
 ## Capturas de pantalla
 
-<img src='./public/assets/captura 2.jpg'>
 <img src='./public/assets/captura 1.jpg'>
+<img src='./public/assets/captura 2.jpg'>
 
 ## Características
 
